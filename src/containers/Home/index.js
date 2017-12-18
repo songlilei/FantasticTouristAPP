@@ -1,5 +1,4 @@
 import React,{Component} from "react";
-import ReactDOM from "react-dom";
 import Header from "../../components/Header/index";
 import Tab from "../../components/Tab/index";
 import "./index.less"
