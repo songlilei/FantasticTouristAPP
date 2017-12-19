@@ -25,6 +25,7 @@ let sliders=require("./mock/slider")
 //付瑶用来存放用户的数组
 let users=[];
 app.get('/api/sliders',function(req,res){
+    console.log(sliders)
     res.json(sliders);
 });
 //以下是大家获取旅游列表的方法
