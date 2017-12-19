@@ -10,9 +10,13 @@ app.use(session({
 }))
 
 app.use(function (req,res,next) {
+<<<<<<< HEAD
     //更改
     // res.header('Access-Control-Allow-Origin',"*");
     res.header('Access-Control-Allow-Origin','http://localhost:8080');
+=======
+    res.header('Access-Control-Allow-Origin',"http://localhost:8080");
+>>>>>>> aae64539d14eed68cd00bea7170dae3438c2762f
     res.header('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,DELETE');
     res.header('Access-Control-Allow-Headers','Content-Type,Accept');
     res.header('Access-Control-Allow-Credentials',"true");
