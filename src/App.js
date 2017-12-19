@@ -8,6 +8,8 @@ let history=createHashHistory();
 import {ConnectedRouter} from 'react-router-redux';
 import Home from "./containers/Home/index";
 import Cart from "./containers/Cart/index";
+import Traffic from "./containers/traffic/index";
+
 //The prop `history` is marked as required in `Router`
 //如果是HashRouter hash
 //BrowserRouter html5 pushState
@@ -15,13 +17,14 @@ import Cart from "./containers/Cart/index";
 export default class App extends Component {
   render() {
     return (
+
         <ConnectedRouter history={history}>
             <div>
                 <Route exact path="/" component={Home}/>
+                <Route exact path="/traffic" component={Traffic}/>
                 <Route path="/order" component={Cart}/>
             </div>
         </ConnectedRouter>
-
     )
   }
 }
