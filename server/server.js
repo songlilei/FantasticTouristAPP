@@ -10,7 +10,7 @@ app.use(session({
 }))
 
 app.use(function (req,res,next) {
-    res.header('Access-Control-Allow-Origin',"*");
+    res.header('Access-Control-Allow-Origin',"http://localhost:8080");
     res.header('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,DELETE');
     res.header('Access-Control-Allow-Headers','Content-Type,Accept');
     res.header('Access-Control-Allow-Credentials',"true");
@@ -25,6 +25,7 @@ let sliders=require("./mock/slider")
 //付瑶用来存放用户的数组
 let users=[];
 app.get('/api/sliders',function(req,res){
+    console.log(sliders)
     res.json(sliders);
 });
 //以下是大家获取旅游列表的方法
