@@ -11,9 +11,13 @@ app.use(session({
 
 app.use(function (req,res,next) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     //更改
     // res.header('Access-Control-Allow-Origin',"*");
     res.header('Access-Control-Allow-Origin','http://localhost:8080');
+=======
+    res.header('Access-Control-Allow-Origin',"http://localhost:8080");
+>>>>>>> aae64539d14eed68cd00bea7170dae3438c2762f
 =======
     res.header('Access-Control-Allow-Origin',"http://localhost:8080");
 >>>>>>> aae64539d14eed68cd00bea7170dae3438c2762f

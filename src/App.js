@@ -23,6 +23,7 @@ export default class App extends Component {
         <div>
 
 
+
           <Route exact path="/" component={Profile}/>
             <Route  path="/login" component={Login}/>
             <Route  path="/reg" component={Reg}/>
