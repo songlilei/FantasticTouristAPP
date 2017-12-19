@@ -53,7 +53,7 @@ export default class Cart extends Component {
     render(){
         return(
             <div>
-                <Header title="下单喽"/>
+                <Header title="下单啦"/>
                 <div className="main-content1">
                     {
                         this.state.list.map((item,index)=>(
