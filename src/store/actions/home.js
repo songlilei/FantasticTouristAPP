@@ -1,5 +1,5 @@
 import * as types from '../action-types';
-import {getSliders} from '../../api/home';
+import {getSliders,getDestinations} from '../../api/home';
 let actions =  {
   fetchSliders(){
     //正常的action只能使用纯对象，如果需要派发函数的话需要使用中间件，redux-thunk
@@ -17,9 +17,9 @@ let actions =  {
       })
     }
   },
-  /*fetchLessons(){
+  fetchDestinations(){
     return function(dispatch,getState){
-      let {type,lessons:{
+      let {destinations:{
         loading,
         offset,
         limit,
@@ -27,36 +27,24 @@ let actions =  {
       }} = getState().home;
       //如果已经在获取数据了，则重复点击不要再获取了
       if(hasMore && !loading){
-        dispatch({type:types.FETCH_LESSONS});
-        dispatch({type:types.FETCH_LESSONS_SUCCESS,payload:getLessons(type,offset,limit)});
+        dispatch({type:types.FETCH_DESTINATIONS});
+        dispatch({type:types.FETCH_DESTINATIONS_SUCCESS,payload:getDestinations(offset,limit)});
       }
     }
   },
-  refreshLessons(){//下拉刷新
+  refreshDestinations(){//下拉刷新
     return function(dispatch,getState){
       let {
-        type,
-        lessons:{
+          destinations:{
           loading,offset,limit,hasMore
         }
       } = getState().home;
       if(!loading){
-         dispatch({type:types.REFRESH_LESSONS});
-         dispatch({type:types.REFRESH_LESSONS_SUCCESS,payload:getLessons(type,0,offset)});
+         dispatch({type:types.REFRESH_DESTINATIONS});
+         dispatch({type:types.REFRESH_DESTINATIONS_SUCCESS,payload:getDestinations(0,offset)});
       }
     }
-  },
-  changeType(type){
-    return function(dispatch,getState){
-      //1.改变课程分类
-       dispatch({
-         type:types.CHANGE_TYPE,
-         payload:type
-       });
-      //2.根据新的课程分类过滤课程列表
-      actions.refreshLessons()(dispatch,getState);
-    }
-  }*/
+  }
 }
 
 export default actions;
