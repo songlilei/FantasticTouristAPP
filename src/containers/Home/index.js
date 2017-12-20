@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
-import React,{Component} from "react";
-=======
 import React, {Component} from "react";
->>>>>>> de0c9ba413ab55a9f586f70cd6507bac2d648159
 import Header from "../../components/Header/index";
 import Tab from "../../components/Tab/index";
 import "./index.less"
@@ -14,9 +10,6 @@ import HomeDestinations from "./HomeDestinations/index";
 import HomeSubNav from "./HomeSubNav/index";
 import {upLoadMore, downRefresh} from '../../utils';
 
-<<<<<<< HEAD
-export default class Home extends Component {
-=======
 class Home extends Component {
     componentDidMount() {
         this.props.fetchSliders();
@@ -24,8 +17,6 @@ class Home extends Component {
         upLoadMore(this.content, this.props.fetchDestinations);
         downRefresh(this.content, this.props.refreshDestinations);
     }
-
->>>>>>> de0c9ba413ab55a9f586f70cd6507bac2d648159
     render() {
         return (
             <div>
@@ -44,11 +35,9 @@ class Home extends Component {
         )
     }
 }
-<<<<<<< HEAD
-=======
+
 
 export default connect(
     state => state.home,
     actions
 )(Home);
->>>>>>> de0c9ba413ab55a9f586f70cd6507bac2d648159

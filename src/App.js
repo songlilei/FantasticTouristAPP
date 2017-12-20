@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
-import './style/comm.less'
-import {Route} from 'react-router-dom';
+import './style/comm.less';
 import Profile from "../src/containers/Profile/index";
 import Login from "../src/containers/Login/index";
 import Reg from "../src/containers/Reg/index";
-
-
-
-
 import {Route,HashRouter as Router} from 'react-router-dom';
 //import history from './store/history';
 //ConnectedRouter这个组件实现redux仓库和本组件连接
