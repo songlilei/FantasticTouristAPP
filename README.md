@@ -1,6 +1,8 @@
 # FantasticTouristAPP
 这是团队的写作项目
 
+
+=======
 ##clone后
 - npm install安装依赖
 - npm run dev 把项目跑起来
@@ -14,3 +16,4 @@
 ## 关于后台
 - 后台代码标识了接口，需要什么数据去后台查看代码
 - 已经完成API的编纂，大家可以直接调用API的方法
+
