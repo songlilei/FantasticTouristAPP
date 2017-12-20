@@ -10,25 +10,39 @@ import HomeSubNav from "./HomeSubNav/index";
 import {upLoadMore, downRefresh} from '../../utils';
 
 class Home extends Component {
+    constructor(){
+        super();
+        this.state={
+            ok:false
+        }
+    }
     componentDidMount() {
+        this.setState({ok:true});
         this.props.fetchSliders();
         this.props.fetchDestinations();
         upLoadMore(this.content, this.props.fetchDestinations);
         downRefresh(this.content, this.props.refreshDestinations);
     }
-
     render() {
+        let homeContent = (
+            <div>
+                <HomeSlider sliders={this.props.sliders.list}/>
+                <HomeSubNav/>
+                <HomeDestinations hasMore={this.props.destinations.hasMore}
+                                  loading={this.props.destinations.loading}
+                                  fetchDestinations={this.props.fetchDestinations}
+                                  destinations={this.props.destinations.list}/>
+            </div>
+        )
         return (
             <div>
                 <Header title="首页"/>
                 <div ref={content => this.content = content} className="main-content">
-                    <HomeSlider sliders={this.props.sliders.list}/>
-                    {/*<div className="main-loading"></div>*/}
-                    <HomeSubNav/>
-                    <HomeDestinations hasMore={this.props.destinations.hasMore}
-                                      loading={this.props.destinations.loading}
-                                      fetchDestinations={this.props.fetchDestinations}
-                                      destinations={this.props.destinations.list}/>
+                    {
+                        this.state.ok?homeContent:<div className="main-loading"></div>
+                    }
+
+
                 </div>
                 <Tab/>
             </div>

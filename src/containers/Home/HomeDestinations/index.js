@@ -6,6 +6,20 @@ import LoadMore from "../LoadMore/index";
 import NoMore from "../NoMore/index";
 
 export default class HomeDestinations extends Component {
+
+    /*loadImage = (url, ele)=>{
+
+        ele.onload = function(){
+            ele.onload = null;
+            return;
+        }
+        ele.src = url;
+    }
+    componentDidMount() {
+        console.log("this.img",this.img)
+        this.loadImage(this.img.getAttribute("data-src"),this.img)
+    }*/
+
     render() {
         return (
             <section className="destinations">
@@ -14,7 +28,9 @@ export default class HomeDestinations extends Component {
                     {
                         this.props.destinations.map((item, index) => (
                             <Link key={item.id} to={{pathname: `/detail/${item.id}`, state: item}}>
-                                <img src={item.url}/>
+                                {/*<img ref={img => this.img = img} data-src={item.url}
+                                     src={require("../../../images/load.png")}/>*/}
+                                <img src={item.url} />
                                 <div className="list-introduction">
                                     <h6><span>景点</span>{item.title}</h6>
                                     <p className="list-infor">{item.title}</p>
