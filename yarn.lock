@@ -623,7 +623,7 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
 
 babel-plugin-transform-object-rest-spread@^6.13.0:
   version "6.26.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.26.0.tgz#0f36692d50fef6b7e2d4b3ac1478137a963b7b06"
+  resolved "http://registry.npm.taobao.org/babel-plugin-transform-object-rest-spread/download/babel-plugin-transform-object-rest-spread-6.26.0.tgz#0f36692d50fef6b7e2d4b3ac1478137a963b7b06"
   dependencies:
     babel-plugin-syntax-object-rest-spread "^6.8.0"
     babel-runtime "^6.26.0"
@@ -3893,7 +3893,11 @@ react-router-dom@^4.2.2:
 
 react-router-redux@^4.0.8:
   version "4.0.8"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
+=======
+  resolved "http://registry.npm.taobao.org/react-router-redux/download/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
+>>>>>>> dev
 
 react-router@^4.2.0:
   version "4.2.0"
