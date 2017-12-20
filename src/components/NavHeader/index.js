@@ -6,6 +6,7 @@ class NavHeader extends Component {
     return (
       <div className="nav-header" >
         {this.props.title}
+
           <i className="iconfont icon-fanhui" onClick={()=>this.props.history.goBack()}></i>
       </div>
     )
@@ -17,4 +18,3 @@ export default withRouter(NavHeader);
 
 
 
-// 9-》

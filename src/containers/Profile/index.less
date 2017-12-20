@@ -1,9 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .profile {
+  padding:56px 0px 0;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 20;
+  background-color: #FFF;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
   .profile-bg {
-    background: url(../../img/login_bg.png) center center;
+
+    background: url(../../images/bj.jpg);
     background-size: contain;
     width: 100%;
-    height: 223px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,4 +39,25 @@
       margin-top: 16px;
     }
   }
+  .alls{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(163, 163, 163, 0.55);
+    i{
+      display: inline-block;
+      height: 50px;
+      width: 30px;
+      line-height:50px  ;
+      color: #3a9be8;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    span{
+      text-align: center;
+      line-height: 50px;
+      height: 50px;
+    }
+  }
+
 }
