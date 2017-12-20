@@ -10,7 +10,7 @@ import Home from "./containers/Home/index";
 
 import Cart from "./containers/Cart/index";
 import Traffic from "./containers/traffic/index";
-import List from "./Containers/List/index";
+import List from "./containers/List/index";
 
 //The prop `history` is marked as required in `Router`
 //如果是HashRouter hash
