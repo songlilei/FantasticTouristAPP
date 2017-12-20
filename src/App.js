@@ -6,6 +6,7 @@ import history from './store/history';
 import {ConnectedRouter} from 'react-router-redux';
 
 import Home from "./containers/Home/index";
+import List from "./Containers/List/index";
 //The prop `history` is marked as required in `Router`
 //如果是HashRouter hash
 //BrowserRouter html5 pushState
@@ -16,6 +17,7 @@ export default class App extends Component {
       <ConnectedRouter history={history}>
         <div>
             <Route exact path="/" component={Home}/>
+            <Route path="/list" component={List}/>
         </div>
       </ConnectedRouter>
     )
