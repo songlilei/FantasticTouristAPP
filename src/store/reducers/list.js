@@ -1,6 +1,5 @@
 import * as types from '../action-types';
 let initState={
-    type:"",
     lesson:{
         hasMore:true,
         list:[],

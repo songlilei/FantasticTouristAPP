@@ -5,7 +5,7 @@ import list from "./list"
 let reducers = combineReducers({
 
   home,
-list,
+  list,
   router:routerReducer
 
 });

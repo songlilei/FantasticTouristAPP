@@ -12,7 +12,7 @@ let actions={
             }}=getState().list;
             if(hasMore&&!isLoading){
                 dispatch({type:types.GET_LIST});
-                dispatch({type:types.LIST_SUCCESS,payload:getLessons(type,offset,limit)})
+                dispatch({type:types.LIST_SUCCESS,payload:getLessons(offset,limit)})
             }
         }
     }
