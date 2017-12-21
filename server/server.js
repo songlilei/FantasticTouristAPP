@@ -40,7 +40,7 @@ app.get('/api/list',function(req,res){
     data.hasMore = offset+limit<total;
     setTimeout(function(){
         res.json(data);
-    },2000);
+    },1000);
 });
 
 //以下是付瑶的登陆注册页面逻辑

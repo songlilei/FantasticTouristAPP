@@ -30,7 +30,7 @@ export default class HomeDestinations extends Component {
                             <Link key={item.id} to={{pathname: `/detail/${item.id}`, state: item}}>
                                 {/*<img ref={img => this.img = img} data-src={item.url}
                                      src={require("../../../images/load.png")}/>*/}
-                                <img src={item.url} />
+                                <img src={require("../../../images/load.png")} />
                                 <div className="list-introduction">
                                     <h6><span>景点</span>{item.title}</h6>
                                     <p className="list-infor">{item.title}</p>
