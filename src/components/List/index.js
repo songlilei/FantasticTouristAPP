@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
+import {Link} from "react-router-dom";
 import './index.less';
 
 export default class List extends Component {
@@ -25,7 +26,7 @@ export default class List extends Component {
                 </div>
                 <div className="footer">
 
-                        <span>首页&nbsp;&nbsp;&nbsp;&nbsp;|</span>
+                        <Link  to="/">首页&nbsp;&nbsp;&nbsp;&nbsp;|</Link>
                         <span>我的&nbsp;&nbsp;&nbsp;&nbsp;|</span>
                         <span>HAO旅游下载&nbsp;&nbsp;&nbsp;&nbsp;|</span>
                         <span>帮助</span>

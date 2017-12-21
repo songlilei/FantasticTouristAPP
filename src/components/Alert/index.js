@@ -18,6 +18,7 @@ class Alert extends Component {
             )
         } else if (this.props.error) {
             return (
+
                 <div className="alert error">{this.props.error}</div>
             )
         } else {
@@ -29,3 +30,12 @@ export default connect(
     state => state.session,
     actions
 )(Alert);
+
+
+/*
+
+{/!* <div className="alert success">
+ {
+ this.props.success
+ }
+ </div>*!/}*/

@@ -7,7 +7,7 @@ class NavHeader extends Component {
       <div className="nav-header" >
         {this.props.title}
 
-          <i className="iconfont icon-fanhui" onClick={()=>this.props.history.goBack()}></i>
+          <i className="glyphicon glyphicon-chevron-left" onClick={()=>this.props.history.goBack()}></i>
       </div>
     )
   }
