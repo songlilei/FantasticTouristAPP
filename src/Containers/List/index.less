@@ -1,0 +1,49 @@
+.LN_list{
+  .list-content{
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    bottom: 54px;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    img{
+      width: 40%;
+      height: 100px;
+    }
+    a{
+      color: #000;
+      display: flex;
+      margin: 10px 0;
+      .list_left{
+        flex: 1;
+        padding: 0 10px;
+        h4{color: #3a9be8}
+        .list_intro{
+          text-overflow:ellipsis;//值为clip表示剪切，ellipsis时为显示省略号
+          overflow:hidden;
+          white-space:nowrap;
+          width:190px;
+          margin: 6px 0;
+          font-size: 13px;
+          color: #414141;
+        }
+        .list_price{
+          display: flex;
+          font-size: 14px;
+          color: #7b7b7b;
+          p:nth-child(1){
+            flex: 1;
+          }
+          p:nth-child(2){
+            flex: 1;
+            span{
+              font-style: normal;
+              color: #eec256;
+            }
+          }
+        }
+      }
+    }
+  }
+}
