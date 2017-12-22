@@ -31,6 +31,9 @@ export function downRefresh(dom,callback){
       let pageY = event.touches[0].pageY;
       if(pageY>startY){//如果新的纵坐标大于旧的坐标的话，则为下拉
         distance = pageY - startY;//计算总共移动的距离
+          if(distance>=56){
+              distance=56;
+          }
         //新的top值等于最原始的top+触摸移动的距离
         dom.style.top = originTop+distance+'px';
       }else{
@@ -56,7 +59,7 @@ export function downRefresh(dom,callback){
           clearInterval(timer);
         }
       },14);
-      if(distance>50){
+      if(distance>20){
         callback();//如果拉的距离大于了50像素，就可以刷新了
       }
     }

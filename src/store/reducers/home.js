@@ -1,6 +1,7 @@
 import * as types from '../action-types';
 //首页的初始状态
 let initState = {
+    txt:'',
     sliders: {
         loading: false,
         list: []
@@ -71,6 +72,11 @@ export default function (state = initState, action) {
                   offset:action.payload.list.length,
                   hasMore:action.payload.hasMore
               }
+          }
+      case types.FETCH_SEARCH:
+          return {
+              ...state,
+              txt:action.payload
           }
     default:
       return state;

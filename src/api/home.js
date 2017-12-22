@@ -4,6 +4,6 @@ export function getSliders() {
     return get("/api/sliders");
 }
 //获取首页目的地列表
-export function getDestinations(offset,limit) {
-    return get(`/api/list?offset=${offset}&limit=${limit}`);
+export function getDestinations(offset,limit,txt) {
+    return get(`/api/search?offset=${offset}&limit=${limit}&txt=${txt}`);
 }

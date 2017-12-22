@@ -3,6 +3,8 @@ let bodyParser =require("body-parser");
 let session=require("express-session");
 let app=express();
 app.use(bodyParser.json());
+// 创建 application/x-www-form-urlencoded 编码解析
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(session({
     resave:true,
     saveUninitialized:true,
@@ -49,7 +51,31 @@ app.get('/api/list',function(req,res){
     data.hasMore = offset+limit<total;
     setTimeout(function(){
         res.json(data);
-    },2000);
+    },10);
+});
+
+//获取search搜索框列表的方法
+app.get('/api/search',function(req,res){
+
+    let {txt="",offset=0,limit=5} = req.query;
+    offset = isNaN(offset)?0:parseInt(offset);
+    limit = isNaN(limit)?0:parseInt(limit);
+    let newLessons = JSON.parse(JSON.stringify(lessons));
+    let searchList;
+    if(txt.trim()!=""){
+        searchList = newLessons.list.filter((item,index)=>(
+            item.title.indexOf(txt)>-1
+        ));
+    }else{
+        txt="";
+        searchList=newLessons.list;
+    }
+    newLessons.list = searchList;
+    newLessons.hasMore = limit+offset<newLessons.list.length;
+    newLessons.list = newLessons.list.slice(offset,offset+limit);
+    setTimeout(function(){
+        res.json(newLessons);
+    },10);
 });
 
 //以下是付瑶的登陆注册页面逻辑
