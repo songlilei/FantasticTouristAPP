@@ -19,7 +19,7 @@ export default class Cart extends Component {
         //     });
         //     this.setState({total,all})
         // }))
-        let list=JSON.parse(localStorage.getItem("users"))
+        let list=JSON.parse(localStorage.getItem("users"))||[];
         this.setState({list},function () {
             let total=0;
             let all=0

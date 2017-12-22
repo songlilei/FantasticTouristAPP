@@ -34,6 +34,7 @@ export default class Detail extends Component {
     }
     handleBack=()=>{
         this.props.history.goBack()
+
     }
     filter = (type) => {
         let one = this.state.price.find((item, index) => item.type == type)
@@ -45,6 +46,7 @@ export default class Detail extends Component {
         console.log(users.length);
         alert("加入成功")
         localStorage.setItem("users",JSON.stringify(users))
+        //this.props.history.push('/order')
     }
 
     render() {
