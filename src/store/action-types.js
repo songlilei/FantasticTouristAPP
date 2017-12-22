@@ -19,3 +19,5 @@ export const REFRESH_DESTINATIONS = 'refresh_destinations';
 //刷新热门目的地数据成功
 export const REFRESH_DESTINATIONS_SUCCESS = 'refresh_destinations_success';
 
+//刷新热门目的地数据
+export const FETCH_SEARCH = 'fetch_search';

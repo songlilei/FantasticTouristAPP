@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Header from "../../components/Header/index";
 import Tab from "../../components/Tab/index";
 import "./index.less"
 import HomeSlider from "./HomeSlider/index";
@@ -8,6 +7,7 @@ import actions from '../../store/actions/home';
 import HomeDestinations from "./HomeDestinations/index";
 import HomeSubNav from "./HomeSubNav/index";
 import {upLoadMore, downRefresh} from '../../utils';
+import HomeHeader from "./HomeHeader/index";
 
 class Home extends Component {
     constructor(){
@@ -22,6 +22,7 @@ class Home extends Component {
         this.props.fetchDestinations();
         upLoadMore(this.content, this.props.fetchDestinations);
         downRefresh(this.content, this.props.refreshDestinations);
+
     }
     render() {
         let homeContent = (
@@ -36,12 +37,13 @@ class Home extends Component {
         )
         return (
             <div>
-                <Header title="首页"/>
+                <HomeHeader txt={this.props.txt}
+                            searchTxt={this.props.searchTxt}/>
                 <div ref={content => this.content = content} className="main-content">
+                    <div className="main-loading">下拉刷新啦~</div>
                     {
-                        this.state.ok?homeContent:<div className="main-loading"></div>
+                        this.state.ok?homeContent:<div className="home-loading"></div>
                     }
-
 
                 </div>
                 <Tab/>
