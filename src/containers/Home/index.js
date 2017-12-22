@@ -23,10 +23,6 @@ class Home extends Component {
         this.props.fetchDestinations();
         upLoadMore(this.content, this.props.fetchDestinations);
         downRefresh(this.content, this.props.refreshDestinations);
-<<<<<<< HEAD
-=======
-
->>>>>>> gyj
     }
     render() {
         let homeContent = (
