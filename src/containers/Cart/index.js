@@ -60,6 +60,17 @@ export default class Cart extends Component {
         });
         this.setState({list})
     }
+    remove=(rm)=>{
+        let {total,all}=this.state;
+        let list=this.state.list.filter((item)=>item!=rm);
+        this.setState({list},()=>{
+            localStorage.setItem("users",JSON.stringify(list));
+            all-=rm.number;
+           total-=parseInt(rm.price.man)*parseInt(rm.number);
+            this.setState({all,total})
+        })
+
+    }
     render(){
         return(
             <div>
@@ -82,6 +93,7 @@ export default class Cart extends Component {
                                             </div>
                                         </div>
                                     </div>
+                                    <button onClick={()=>{this.remove(item)}}>删除</button>
                                 </div>
 
                             </div>
