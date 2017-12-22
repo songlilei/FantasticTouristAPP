@@ -7,7 +7,6 @@ import {connect} from "react-redux"
 import actions from "../../store/actions/list";
 import {upLoadMore, downRefresh} from '../../utils';
 import Loading from "../../components/Loading/index";
-import NoMore from "../Home/NoMore/index";
 class List extends Component{
     componentDidMount(){
         this.props.getList();
@@ -34,11 +33,13 @@ class List extends Component{
                                 </Link>
                             ))
                         }
-                        {
-                            this.props.listLesson.isLoading ? <Loading/> : (this.props.listLesson.hasMore ?
-                                <div onClick={this.props.fetchDestinations}> 点击继续加载</div> : <NoMore/>)
+                        <div className="upload">
+                            {
+                                this.props.listLesson.isLoading ? <Loading/> : (this.props.listLesson.hasMore ?
+                                    <button onClick={this.props.fetchDestinations}>继续加载</button> : "")
 
-                        }
+                            }
+                        </div>
                     </div>
                 <Tab/>
             </div>
