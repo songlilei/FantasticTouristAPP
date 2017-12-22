@@ -8,8 +8,9 @@ class Alert extends Component {
     }
     componentDidMount(){
         setTimeout(()=>{
+            console.log(1);
             this.props.clearMessages();
-        },3000);
+        },1000);
     }
     render() {
         if (this.props.success) {

@@ -37,7 +37,7 @@ import * as types from '../action-types';
 import {reg,login,logout,validate} from '../../api/session';
 import {push} from 'react-router-redux';
 import history from '../history';
-export default {
+let actions =  {
     reg(user){
         return function(dispatch,getState){
             reg(user).then(result=>{
@@ -76,12 +76,13 @@ export default {
                     type:types.LOGOUT,
                     payload:{success,error}
                 });
-                dispatch(push('/login'));
+                // dispatch(push('/login'));
             });
         }
     },
     clearMessages(){
         return {
+
             type:types.CLEAR_MESSAGES
         }
     },
@@ -97,3 +98,4 @@ export default {
         }
     }
 }
+export default actions;

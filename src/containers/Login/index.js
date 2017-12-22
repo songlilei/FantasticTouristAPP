@@ -1,6 +1,3 @@
-/*
-/!*
-/!*
 import React,{Component} from 'react';
 import NavHeader from '../../components/NavHeader';
 //效验是否登录，在redux中取数据
@@ -14,34 +11,42 @@ import  actions from "../../store/actions/session"
 
 
 
-
 import "./index.less"
 import {Link} from 'react-router-dom';
-import Alert from "../../components/Alert/index";
+// import actions from "../../store/actions/session";
+// import Alert from "../../components/Alert/index";
  class Login extends Component{
-   /!* constructor(){
-        super()
-        this.state = {login:false}  //默认未登录
-    }*!/
+
      handleClick = ()=>{
          let username = this.username.value;
          let password = this.password.value;
          this.props.login({username,password});
+
+         if(this.props.success){
+
+             alert('恭喜你，登录成功!')
+             // this.props.history.push("/profile")
+         }else if(this.props.error){
+             alert('用户名或密码错误!')
+             // this.props.history.push("/login")
+         }else{
+           return;
+         }
      }
     render(){
         return (
             <div className="login-panel">
                 <NavHeader title="登录" history={this.props.history}/>
-                <div className="login-logo">
-                    <img src={require('../../img/profile.png')} alt=""/>
-                </div>
-                <input ref={input=>this.username=input} type="text" placeholder="用户名"/>
-                <input ref={input=>this.password=input} type="text" placeholder="密码"/>
-                <Link to="/reg">前往注册</Link>
+                {/*<div className="login-logo">*/}
+                    {/*<img src={require('../../img/profile.png')} alt=""/>*/}
+                {/*</div>*/}
+                <input ref={input=>this.username=input} type="text" placeholder="用户名/手机号/邮箱" className="input2"/>
+                <input ref={input=>this.password=input} type="password" placeholder="密码"/>
+
                 <div
-                    onClick={this.handleClick}
+                   onClick={this.handleClick}
                     className="login-btn">登&nbsp;录</div>
-                <Alert/>
+                <Link to="/reg">前往注册</Link>
             </div>
         )
     }
@@ -49,10 +54,10 @@ import Alert from "../../components/Alert/index";
 export default connect(
     state=>state.session,
     actions,
-)(Login)*!/
+)(Login)
 
 
-
+/*
 import React, {Component} from 'react';
 import NavHeader from '../../components/NavHeader';
 import {Link} from 'react-router-dom';
@@ -87,8 +92,8 @@ import Alert from "../../components/Alert/index";
  connect(
     state=>state.session,
     actions
-)(Login);*!/
-import React, {Component} from 'react';
+)(Login);*/
+/*import React, {Component} from 'react';
 import NavHeader from '../../components/NavHeader';
 import {Link} from 'react-router-dom';
 import './index.less'
@@ -99,7 +104,7 @@ class Login extends Component {
     handleClick = ()=>{
         let username = this.username.value;
         let password = this.password.value;
-         this.props.history.push("/profile");
+         // this.props.history.push("/profile");
 
         this.props.login({username,password});
     }
@@ -108,7 +113,7 @@ class Login extends Component {
             <div className="login-panel">
                 <NavHeader title="登录"/>
                 <div className="login-logo">
-                    <img src={require('../../img/profile.png')} alt=""/>
+                    <img src={require('../../images/header.jpg')} alt=""/>
                 </div>
                 <input ref={input=>this.username=input} type="text" placeholder="用户名"/>
                 <input ref={input=>this.password=input} type="password" placeholder="密码"/>
@@ -116,7 +121,7 @@ class Login extends Component {
                 <div
                     onClick={this.handleClick}
                     className="login-btn">登&nbsp;录</div>
-                {/!*<Alert/>*!/}
+                <Alert/>
             </div>
         )
     }
@@ -125,6 +130,7 @@ export default  connect(
     state=>state.session,
     actions
 )(Login);*/
+/*
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import "./index.less"
@@ -184,8 +190,8 @@ class Login extends Component {
                             <input autoFocus ref={input => this.phone = input}
                                    onFocus={this.disappear}
                                    type="text" placeholder="请输入11位手机号码"/>
-                            {/*{this.phone ? this.phone.value === '' ?*/}
-                            {/*<span className="checkout-phone">手机号不能为空</span> : '' : ''}*/}
+                            {/!*{this.phone ? this.phone.value === '' ?*!/}
+                            {/!*<span className="checkout-phone">手机号不能为空</span> : '' : ''}*!/}
                             {this.state.isShow1 ? <span
                                 className="checkout-phone">手机号不能为空</span> : ''}
 
@@ -214,4 +220,4 @@ class Login extends Component {
 export default connect(
     state => state.session,
     actions
-)(Login)
+)(Login)*/

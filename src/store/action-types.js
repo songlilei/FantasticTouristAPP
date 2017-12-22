@@ -8,6 +8,7 @@ export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 
 export const CLEAR_MESSAGES = 'CLEAR_MESSAGES';
+
 export const VALIDATE = 'VALIDATE';
 //获取数据
  export const GET_LIST="GET_LIST";

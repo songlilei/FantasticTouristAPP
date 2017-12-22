@@ -32,7 +32,7 @@ export default class List extends Component {
                         <span>帮助</span>
 
 
-                    <span className="footer">©2017 Hao旅游 <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP证070791号</a></span>
+                    <p className="footer">©2017 Hao旅游 京ICP证070791号</p>
 
                 </div>
 
