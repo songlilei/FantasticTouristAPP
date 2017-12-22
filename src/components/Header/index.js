@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <section className="header">
-                <h1><img src={require("../../images/logo.jpg")} alt="HAO旅游"/>{this.props.title}</h1>
+                <h1><img src={require("../../images/logo.png")} alt="HAO旅游"/>{this.props.title}</h1>
             </section>
         )
     }
