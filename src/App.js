@@ -11,6 +11,7 @@ import Home from "./containers/Home/index";
 import Cart from "./containers/Cart/index";
 import Traffic from "./containers/traffic/index";
 import List from "./containers/List/index";
+import Pay from "./containers/Pay/index";
 
 //The prop `history` is marked as required in `Router`
 //如果是HashRouter hash
@@ -27,6 +28,7 @@ export default class App extends Component {
                 <Route exact path="/traffic" component={Traffic}/>
                 <Route path="/order" component={Cart}/>
                 <Route path="/list" component={List}/>
+                <Route path="/pay" component={Pay}/>
             </div>
         </ConnectedRouter>
 
