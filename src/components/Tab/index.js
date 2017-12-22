@@ -10,7 +10,7 @@ export default class Tab extends Component {
                     <i className="iconfont icon-icon-site"></i>
                     <span>首页</span>
                 </NavLink>
-                <NavLink to="/inbound-tour" activeClassName="active">
+                <NavLink to="/list" activeClassName="active">
                     <i className="iconfont icon-lvyou"></i>
                     <span>境内游</span>
                 </NavLink>

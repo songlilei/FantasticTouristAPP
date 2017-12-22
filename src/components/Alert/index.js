@@ -1,0 +1,42 @@
+import React, {Component} from 'react';
+import './index.less'
+import {connect} from 'react-redux';
+import actions from '../../store/actions/session';
+class Alert extends Component {
+    static defaultProps = {
+        level: 'default'
+    }
+    componentDidMount(){
+        setTimeout(()=>{
+            console.log(1);
+            this.props.clearMessages();
+        },1000);
+    }
+    render() {
+        if (this.props.success) {
+            return (
+                <div className="alert success">{this.props.success}</div>
+            )
+        } else if (this.props.error) {
+            return (
+
+                <div className="alert error">{this.props.error}</div>
+            )
+        } else {
+            return null;
+        }
+    }
+}
+export default connect(
+    state => state.session,
+    actions
+)(Alert);
+
+
+/*
+
+{/!* <div className="alert success">
+ {
+ this.props.success
+ }
+ </div>*!/}*/

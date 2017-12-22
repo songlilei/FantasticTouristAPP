@@ -90,11 +90,11 @@ export default class Cart extends Component {
                     }
                     <div className="total">
                         <div className="money">合计：<span>{!!this.state.total?this.state.total:"买个呗"}</span></div>
-                        {/*<Link to="/pay">*/}
+                        <Link to={{pathname:"/pay",state:{total:this.state.total,sumNum:this.state.all,list:this.state.list}}}>
                             <div className="pay">
                                 结算 ({!!this.state.all&&this.state.all})
                             </div>
-                        {/*</Link>*/}
+                        </Link>
                     </div>
                 </div>
 

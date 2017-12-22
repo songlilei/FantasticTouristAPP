@@ -1,7 +1,7 @@
 import {get,post} from './index';
 //注册
 export function reg(user){
-  return post('/api/reg',user);//{username,password}
+  return post('/api/signup',user);//{username,password}
 }
 //登录
 export function login(user){
