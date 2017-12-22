@@ -27,7 +27,7 @@ import {Link} from 'react-router-dom';
              alert('恭喜你，登录成功!')
              // this.props.history.push("/profile")
          }else if(this.props.error){
-             alert('用户名或密码错误!')
+             alert('用户不存在!')
              // this.props.history.push("/login")
          }else{
            return;

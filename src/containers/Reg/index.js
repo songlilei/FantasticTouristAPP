@@ -92,13 +92,14 @@ class Reg extends Component {
                 {/*<div className="reg-logo">
                     <img src={require('../../images/header.jpg')} alt=""/>
                 </div>*/}
+                <label htmlFor="name">姓名：</label>
                 <input ref={input => this.username = input} type="text" placeholder="用户名" className="input1" required="required" onBlur={this.checkUser}/>
+                <label htmlFor="name">手机号：</label>
                 <input type="text" placeholder="手机号" required="required"/>
-                <input type="text" placeholder="邮箱" required="required"/>
+                <label htmlFor="name">密码：</label>
                 <input ref={input => this.password = input}
                        type="password" placeholder="密码" required="required"/>
-                <input ref={input => this.toPassword = input}
-                       type="password" placeholder=" 确认密码" required="required"/>
+
                 {/*<Link to="/login">前往登录</Link>*/}
                 <div className="text-div" id="errorMsg">
 
