@@ -6,7 +6,7 @@ export default class Task extends Component {
     render() {
         return (
             <div className="foot">
-                <NavLink exact activeClassName="active" to="/">
+                <NavLink exact activeClassName="active" to="/order">
                     <i className="glyphicon glyphicon-tasks"></i>
                     <span>全部订单</span>
                 </NavLink>
