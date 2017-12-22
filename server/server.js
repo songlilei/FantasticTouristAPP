@@ -10,7 +10,16 @@ app.use(session({
 }))
 
 app.use(function (req,res,next) {
+
+
+    //更改
+    // res.header('Access-Control-Allow-Origin',"*");
+    res.header('Access-Control-Allow-Origin','http://localhost:8080');
+
+
+
     res.header('Access-Control-Allow-Origin',"http://localhost:8080");
+
     res.header('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,DELETE');
     res.header('Access-Control-Allow-Headers','Content-Type,Accept');
     res.header('Access-Control-Allow-Credentials',"true");
@@ -50,7 +59,9 @@ app.post('/api/signup',function(req,res){
     let oldUser = users.find(item=>item.username == user.username);
     if(oldUser){
         res.json({code:1,error:'用户名已经被占用!'});
-    }else{
+    }
+
+    else {
         users.push(user);
         res.json({code:0,success:'用户注册成功!'});
     }
