@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import Header from "../../components/Header/index";
 import Tab from "../../components/Tab/index";
 import Loading from "../../components/Loading/index"
+import  {Link} from "react-router-dom"
 import "./index.less"
 //import moment from "moment"
 export default class Pay extends Component {
@@ -35,7 +36,17 @@ export default class Pay extends Component {
                 <Header title="去结账"/>
                 <div className="content3">
                     <div className="wrap">
-                        <img src={list[0].url} alt=""/>
+                        <div className="imgcontainer">
+                            {list.map((item,index)=>(
+                                <div key={index}>
+                                    <Link to={{pathname:`/detail/${item.id}`,state:item}}>
+                                        <img src={item.url}/>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/*<img src={list[0].url} alt=""/>*/}
                         <span>支付剩余时间 {this.state.minute}:{this.state.second}</span>
                         <span>共计{total}元</span>
                     </div>
