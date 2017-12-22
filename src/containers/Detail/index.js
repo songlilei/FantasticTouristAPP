@@ -46,7 +46,7 @@ export default class Detail extends Component {
         console.log(users.length);
         alert("加入成功")
         localStorage.setItem("users",JSON.stringify(users))
-        //this.props.history.push('/order')
+        this.props.history.push('/order')
     }
 
     render() {
