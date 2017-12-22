@@ -9,6 +9,7 @@ import {ConnectedRouter} from 'react-router-redux';
 import Home from "./containers/Home/index";
 import Cart from "./containers/Cart/index";
 import Traffic from "./containers/traffic/index";
+import Detail from "./containers/Detail/index";
 
 //The prop `history` is marked as required in `Router`
 //如果是HashRouter hash
@@ -23,6 +24,7 @@ export default class App extends Component {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/traffic" component={Traffic}/>
                 <Route path="/order" component={Cart}/>
+                <Route path="/detail/:id" component={Detail}/>
             </div>
         </ConnectedRouter>
     )
