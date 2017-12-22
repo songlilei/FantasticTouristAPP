@@ -13,13 +13,16 @@ export default class Pay extends Component {
         let timeSpan = 5*60;
         function lastTime() {
             timeSpan--;
+            if (timeSpan==0) {
+                clearInterval(timer)
+            }
             let minute = Math.floor(timeSpan / 60);
             timeSpan = timeSpan - minute * 60 ;
             let second = timeSpan;
             this.setState({minute,second});
             timeSpan+=minute * 60
         }
-        setInterval(lastTime.bind(this),1000);
+        let timer=setInterval(lastTime.bind(this),1000);
     }
 
     render(){
