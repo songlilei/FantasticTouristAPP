@@ -10,7 +10,17 @@ export default class Cart extends Component {
         this.state={list:[],total:0,all:0}
     }
     componentDidMount(){
-        getLessons(0,3).then(res=>this.setState({list:res.list},function () {
+        // getLessons(0,3).then(res=>this.setState({list:res.list},function () {
+        //     let total=0;
+        //     let all=0
+        //     this.state.list.forEach(item=>{
+        //         total+=parseInt(item.price.man)
+        //         all+=item.number
+        //     });
+        //     this.setState({total,all})
+        // }))
+        let list=JSON.parse(localStorage.getItem("users"))
+        this.setState({list},function () {
             let total=0;
             let all=0
             this.state.list.forEach(item=>{
@@ -18,7 +28,7 @@ export default class Cart extends Component {
                 all+=item.number
             });
             this.setState({total,all})
-        }))
+        })
     }
     minus=(item)=>{
        let list=this.state.list.map((one)=>{

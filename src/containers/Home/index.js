@@ -1,3 +1,4 @@
+
 import React, {Component} from "react";
 import Header from "../../components/Header/index";
 import Tab from "../../components/Tab/index";
@@ -16,7 +17,6 @@ class Home extends Component {
         upLoadMore(this.content, this.props.fetchDestinations);
         downRefresh(this.content, this.props.refreshDestinations);
     }
-
     render() {
         return (
             <div>
@@ -35,6 +35,7 @@ class Home extends Component {
         )
     }
 }
+
 
 export default connect(
     state => state.home,

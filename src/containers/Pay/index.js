@@ -3,7 +3,7 @@ import Header from "../../components/Header/index";
 import Tab from "../../components/Tab/index";
 import Loading from "../../components/Loading/index"
 import "./index.less"
-import moment from "moment"
+//import moment from "moment"
 export default class Pay extends Component {
     constructor(){
         super()
