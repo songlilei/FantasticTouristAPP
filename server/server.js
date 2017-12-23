@@ -18,8 +18,6 @@ app.use(function (req,res,next) {
     // res.header('Access-Control-Allow-Origin',"*");
     res.header('Access-Control-Allow-Origin','http://localhost:8080');
 
-
-
     res.header('Access-Control-Allow-Origin',"http://localhost:8080");
 
     res.header('Access-Control-Allow-Methods','GET,POST,OPTIONS,PUT,DELETE');
@@ -51,7 +49,7 @@ app.get('/api/list',function(req,res){
     data.hasMore = offset+limit<total;
     setTimeout(function(){
         res.json(data);
-    },10);
+    },500);
 });
 
 //获取search搜索框列表的方法
@@ -75,7 +73,7 @@ app.get('/api/search',function(req,res){
     newLessons.list = newLessons.list.slice(offset,offset+limit);
     setTimeout(function(){
         res.json(newLessons);
-    },10);
+    },500);
 });
 
 //以下是付瑶的登陆注册页面逻辑
